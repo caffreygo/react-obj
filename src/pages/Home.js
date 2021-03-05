@@ -24,22 +24,22 @@ function Home(props) {
   }, [])
 
   return (
-    <>
-      <div className="home">
-        <span className="hLess">
-          {state[0]?.name}--我是首页计数器{count}
-        </span>
-        <button onClick={onAddClick}>加</button>
-        <button onClick={onReduceClick}>减</button>
+    <div className="home">
+      <span className="hLess">
+        {state[0]?.name}--我是首页计数器{count}
+      </span>
+      <button onClick={onAddClick}>加</button>
+      <button onClick={onReduceClick}>减</button>
+      <div>
+        <img src={timg} alt="图" />
       </div>
-      <img src={timg} alt="图" />
-    </>
+    </div>
   )
 }
 // 获取store中的值到当前组件
 function mapStateToProps(state) {
   return {
-    count: state.counter.count,
+    count: state.counter.count
   }
 }
 // 修改store中的值
